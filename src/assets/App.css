@@ -6,7 +6,7 @@
 }
 
 .tw-followCard-header {
-    display: flex;
+    displayname="Miguel Angel Duran": flex;
     align-items: center;
     gap: 4px;
 }
@@ -27,9 +27,26 @@
 }
 
 .tw-followCard-button {
+    cursor: pointer;
     margin-left: 16px;
     border: 0;
-    border-radius: 999px;
+    border-top-left-radius: 99px;
+    border-bottom-right-radius: 99px;
     padding: 6px 16px;
     font-weight: bold;
+    border: 1px solid #F092DD;
+    transition: .3s ease background-color;
+}
+
+.tw-followCard-button.is-following{
+    border: 1px solid #F092DD;
+}
+
+.tw-followCard-button:hover {
+    background-color:#FFAFF0 ;
+}
+
+.tw-followCard-button.is-followin :hover{
+    background: #F092DD;
+
 }

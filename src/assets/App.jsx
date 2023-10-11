@@ -1,21 +1,21 @@
+import { TwitterFollowCard } from './TwitterFollowCard'
 import '/src/assets/App.css'
 
 export function App() {
-    return (
-        <article className='tw-followCard'>
-            <header className='tw-followCard-header'>
-                <img
-                    className='tw-followCard-avatar'
-                    alt="El avatar de midudev" src="http://unavatar.io/midudev" />
-                <div className='tw-followCard-info'>
-                    <strong>Miguel Angel Duran</strong>
-                    <span className='tw-followCard-infoUserName'>@midudev</span>
-                </div>
-            </header>
+    const addAt = (userName) => `@${userName}`
 
-            <aside>
-                <button className='tw-followCard-button'>Seguir</button>
-            </aside>
-        </article>
+    return (
+        <section className='App'>
+            <TwitterFollowCard addAt={addAt} userName="midudev">
+                Miguel Angel Duran
+            </TwitterFollowCard>
+
+            <TwitterFollowCard addAt={addAt} userName="halivert">
+                Hali Velazquez Vazquez
+            </TwitterFollowCard>
+
+            <TwitterFollowCard addAt={addAt} userName="3velayna">
+                Evelyn Serrano Acosta            </TwitterFollowCard>
+        </section>
     )
 }
